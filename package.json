@@ -1,0 +1,25 @@
+{
+  "name": "SK3 annon project",
+  "version": "1.0.0",
+  "author": {
+    "name": "Skal3mar",
+  },
+  
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ecstatic": "^4.1.4",
+    "standard": "*"
+  },
+  "license": "-",
+  "main": "index.js",
+  "private": true,
+  
+  },
+  "scripts": {
+    "serve": "ecstatic --port 4000 --cache 0 static",
+    "start": "npm run serve",
+    "test": "standard",
+    "watch": "npm run serve"
+  }
+}
