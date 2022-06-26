@@ -494,6 +494,46 @@ function animateUrlWithEmojis () {
   }
 }
 
+function animateUrlWithSwastyka () {
+  const f = ['卐', '卍', '卐', '卍', '卐', '卍', '卐', '卍']
+  const d = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  let m = 0
+
+  setInterval(() => {
+    let s = ''
+    let x = 0
+
+    if (!m) {
+      while (d[x] === 4) {
+        x++
+      }
+
+      if (x >= d.length) m = 1
+      else {
+        d[x]++
+      }
+    } else {
+      while (d[x] === 0) {
+        x++
+      }
+
+      if (x >= d.length) m = 0
+      else {
+        d[x]++
+
+        if (d[x] === 8) d[x] = 0
+      }
+    }
+
+    d.forEach(function (n) {
+      s += f[n]
+    })
+
+    window.location.hash = s
+  }, 100)
+}
+
+
 /**
  * Lock the user's pointer, without even being in full screen!
  * Require user-initiated event.
@@ -1061,7 +1101,7 @@ function superLogout () {
     }
 
     const div = document.createElement('div')
-    div.innerText = `HAHA I logout you from ${name}...`
+    div.innerText = `Bye, I logout you from ${name}...`
 
     const logoutMessages = document.querySelector('.logout-messages')
     logoutMessages.appendChild(div)
