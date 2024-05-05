@@ -1,3 +1,2 @@
 # Theannonsite.github.io
-Its project based on theannoyingsite.com in my version.
-All rights reserved to theannoyingsite.com.
+The source code is source code so its open
